@@ -1,0 +1,22 @@
+{
+  "name": "admdev",
+  "version": "1.0.0",
+  "description": "My page",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "admiinator.dev"
+  },
+  "keywords": [
+    "Webpage"
+  ],
+  "author": "admiinator",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-generator": "^4.2.0"
+  }
+}
