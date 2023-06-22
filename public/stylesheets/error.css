@@ -1,0 +1,50 @@
+html {
+  padding: 0;
+}
+
+.bg {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.prompt {
+  width: auto;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 50px;
+  color: black;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  text-align: center;
+  flex-direction: column;
+}
+.prompt .title {
+  color: white;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+}
+.prompt .desc {
+  font-size: 30px;
+}
+.prompt .buttons {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.prompt .buttons #back {
+  display: flex;
+  flex-direction: row;
+}
+.prompt .buttons #back-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=error.css.map */
