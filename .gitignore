@@ -2,3 +2,4 @@ node_modules/
 ssl/
 .env
 public/javascripts/lib
+public/images
