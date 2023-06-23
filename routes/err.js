@@ -10,9 +10,9 @@ var msgs = {
 }
 /* GET users listing. */
 router.get('/:code', (req, res, next) => {
-  console.log(req.params);
-  var code = msgs[req.params.code] ? req.params.code : 404;
+  console.log("error page called")
+  var code = msgs[req.params.code] ? req.params.code : res.redirect(`/err/${404}`);
   res.render('error', {error: code, message: msgs[code]})
-})
+});
 
 module.exports = router;

@@ -1,7 +1,17 @@
-doctype html
+doctype html(lang="ko")
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+  head 
+    block favicon
+    block css
+    link(rel='stylesheet', href='/stylesheets/cursor.css')
+    link(rel='stylesheet', href='/stylesheets/default.css')
+    
+    block scripts
+    script(src="/javascripts/lib/gsap/gsap.min.js")
+    script(src="/javascripts/lib/jquery.min.js")
+    script(src="/javascripts/cursor.js")
+
+    block title
+  .cursor
   body
     block content

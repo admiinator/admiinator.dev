@@ -24,8 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 /**
  * Registers routes as reading files from ./routes
  * p = path, f = folder/file, r = './routes'/root
- * Because variable 'p' is treated as a directory, it automatically puts '/' as a prefix and therefore should take away when making full str interpolation
- * as in ./${r}{p}/${f} always starts with a '/'.
+ * Because variable 'p' as in ./${r}{p}/${f} is treated as a directory, it automatically puts '/' as a prefix and therefore should take away when making full str interpolation
  */
 function registerRoutes(p='') {
   let r = 'routes'
@@ -56,12 +55,16 @@ app.use((req, res, next) => {
 
 // error handler
 app.use(function(err, req, res, next) {
+  console.log("error handler called")
+  console.log("request", req);
+  err ||= createError(404);
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
+  // render the error page if it's a user
   res.redirect(`/err/${err.status||404}`);
+  //Set error status if it's not a user (most likely a missing element)
 });
 
 module.exports = app;

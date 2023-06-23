@@ -1,31 +1,29 @@
-//- extends cursor.pug
+extends layout.pug
 
-doctype html(lang='ko')
-html
-  head
-    title #{message} - 애드미네이터
-    link(rel='stylesheet', href='/stylesheets/default.css')
-    link(rel='stylesheet', href='/stylesheets/error.css')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js')
-    script(src="/javascripts/jquery-min.js")
-    script(src="/javascripts/cursor.js")
-    script(src="/javascripts/error.js")
-  body
-    //- append cursor
-    .cursor
-    img.bg(src="/images/bg/err.png")
-    .prompt-wrapper
-      .prompt
-        .text-wrapper
-          .title
-            h1#error= error
-          .desc
-            p#msg= message
-        .buttons
-          button#back 
-            svg#back-icon
-              use(xlink:href="/images/icons/back.svg#root")
-            span 뒤로 가기
-          button#home 홈으로 돌아가기
+block title 
+  title #{message} - 애드미네이터
+
+block css
+  link(rel='stylesheet', href='/stylesheets/error/error.css')
+
+block scripts 
+  script(src="/javascripts/error.js")
+
+block favicon 
+  link(rel="icon", type="iamge/svg+xml" href="/images/icons/favicon/error.svg#root")
+block content
+  img.bg(src="/images/bg/err.png")
+  .prompt-wrapper
+    .prompt
+      .title
+        h1#error= error
+      .desc
+        p#msg= message
+      .buttons
+        button(disabled)#back 
+          svg#back-icon
+            use(xlink:href="/images/icons/back.svg#root")
+          span 뒤로 가기
+        button#home 홈으로 돌아가기
 
 

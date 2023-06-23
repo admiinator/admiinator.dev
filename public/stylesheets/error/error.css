@@ -13,21 +13,19 @@ html {
 
 .prompt {
   width: auto;
-  height: 400px;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.85);
   padding: 50px;
   color: black;
   display: flex;
   align-content: center;
-  justify-content: space-between;
   border-radius: 20px;
   text-align: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .prompt .title {
   color: white;
-  width: auto;
-  height: auto;
   font-size: 30px;
 }
 .prompt .desc {
@@ -36,8 +34,8 @@ html {
 .prompt .buttons {
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
 }
 .prompt .buttons #back {
   display: flex;

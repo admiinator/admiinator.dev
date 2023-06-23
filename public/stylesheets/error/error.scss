@@ -12,20 +12,18 @@ html {
 
 .prompt {
   width: auto;
-  height: 400px;
+  height: auto;
   background-color: rgba(256,256,256,0.85);
   padding: 50px;
   color: black;
   display: flex;
   align-content: center;
-  justify-content: space-between;
   border-radius: 20px;
   text-align: center;
   flex-direction: column;
+  flex-wrap: wrap;
   .title {
     color: white;
-    width: auto;
-    height: auto;
     font-size: 30px;
   }
   .desc {
@@ -34,7 +32,7 @@ html {
   .buttons {
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 50px;
     #back {
       display: flex;
       flex-direction: row;
